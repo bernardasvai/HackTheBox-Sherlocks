@@ -42,9 +42,30 @@ DFIR and threat hunting challenges. Every solved Sherlock includes:
 - MITRE ATT&CK mapping
 - Log analysis (Windows Event Logs, Sysmon, network captures)
 
-## Tools:
+## Tools
 
-OS: Windows 11 Pro 25H2
-VM: Flare-VM
-	Github: https://github.com/mandiant/flare-vm
-Additional Forensic Tool set: https://ericzimmerman.github.io/
+### Environment
+
+| Tool | Purpose |
+|------|---------|
+| Windows 11 Pro 25H2 | Host OS |
+| VMware Workstation | Virtualization for isolated analysis VMs |
+| [FLARE-VM](https://github.com/mandiant/flare-vm) | Windows malware analysis & forensics VM |
+
+### Forensic Analysis — [Eric Zimmerman's Tools](https://ericzimmerman.github.io/)
+
+| Tool | Purpose | Used in |
+|------|---------|---------|
+| ShellBags Explorer | Parse ShellBags (folders browsed, network shares, zip contents) from `UsrClass.dat` | Baggage |
+| Registry Explorer | Browse registry hives (BAM, UserAssist, RecentDocs, TypedPaths) | Baggage, CAMouflage |
+| PECmd | Parse Prefetch files (program execution, run times, files loaded) | CAMouflage |
+| EvtxECmd | Parse Windows event logs (`.evtx`) to CSV | CAMouflage |
+| MFTECmd | Parse `$MFT` and `$J` (USN Journal: file creation, renames, deletions) | CAMouflage |
+| Timeline Explorer | View and filter the CSV output of the tools above | CAMouflage |
+
+### Other
+
+| Tool | Purpose | Used in |
+|------|---------|---------|
+| PowerShell | Running CLI tools, file hashing (`Get-FileHash`), file signature checks (`Format-Hex`) | CAMouflage |
+| Notepad++ | Safe viewing and manual deobfuscation of malicious scripts | CAMouflage |
