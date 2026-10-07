@@ -62,10 +62,3 @@ DFIR and threat hunting challenges. Every solved Sherlock includes:
 | EvtxECmd | Parse Windows event logs (`.evtx`) to CSV | CAMouflage |
 | MFTECmd | Parse `$MFT` and `$J` (USN Journal: file creation, renames, deletions) | CAMouflage |
 | Timeline Explorer | View and filter the CSV output of the tools above | CAMouflage |
-
-### Other
-
-| Tool | Purpose | Used in |
-|------|---------|---------|
-| PowerShell | Running CLI tools, file hashing (`Get-FileHash`), file signature checks (`Format-Hex`) | CAMouflage |
-| Notepad++ | Safe viewing and manual deobfuscation of malicious scripts | CAMouflage |
