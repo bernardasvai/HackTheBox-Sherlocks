@@ -1,9 +1,10 @@
-# Only the HTB-Sherlocks write-ups and README go to GitHub.
+# Only the HTB-Sherlocks / HTB-CTF write-ups and README go to GitHub.
 # Everything else in the vault stays local.
 /*
 !/.gitignore
 !/README.md
 !/HTB-Sherlocks/
+!/HTB-CTF/
 
 # OS files
 .DS_Store
